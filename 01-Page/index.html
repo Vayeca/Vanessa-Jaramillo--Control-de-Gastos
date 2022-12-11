@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Gastos</title>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body onload="actualizarvista()">
+    <header>
+        <h1 class="title">Control de Gastos</h1>
+    <header>
+
+    <section class="content">
+        <div>
+            <h3 class="secondTitle">TU AHORRO </h3>
+            <h3 class="thirdTittle" id="TuAhorro">$ 0.00 </h3>
+            <hr>
+        </div>
+        
+
+        <div class="content">
+            <table class="table">
+                <thead>
+
+                    <tr>
+                        <th class="Ingreso" scope="col">INGRESO</th>
+                        <th class="Gasto" scope="col">GASTO</th>
+                    </tr>
+                    <tr>
+                        <td class="Ingreso" id="ingresoinicial"></td>
+                        <td class="Gasto"id="gastoinicial"></td>
+                    </tr>
+                </thead>
+                <tbody id="Table"></tbody>
+            </table>
+        </div>
+
+        <div>
+        <h3 class="thirdTittle" id="historial">Historial</h3>
+        </div>
+        <hr>
+
+        <div> 
+        <h3 class="thirdTittle">Añadir nueva transacción</h3>
+        </div>
+        <hr>
+        
+
+
+        <div class="form">
+            <form id="DataForm">
+                <div id="#msj-error"></div>
+                <div class="concept">
+                    <label for="concept">Concepto</label>
+                    <input type="concept" required id="concept" placeholder="Añade concepto...">
+                </div>
+
+                <div class="amount" id= "msj-error-pregunta">
+                    <label for="amount">Cantidad (Negativo = Gasto | Positivo = Ingreso) </label>
+                    <input type="number" step="0.01" required id="amount" placeholder="Introduce cantidad...">  
+                </div>
+                      
+        
+                <button type="button" onclick="agregarTransaccion()" class="buttonSave">Agregar transacción</button>
+                
+            </form>
+        
+            <script src="./control.js"></script>
+</body>
+</html>
